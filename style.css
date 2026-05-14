@@ -1,14 +1,14 @@
 /* my portfolio styles - sumit kumar singh */
 
 :root {
-  --bg: #F5F5F5; /* Smoke White */
-  --bg-card: rgba(255, 255, 255, 0.7);
+  --bg: #FAFAFA; /* Extremely soft, premium white */
+  --bg-card: rgba(255, 255, 255, 0.75);
   --accent: #4F46E5; /* Deep Indigo */
   --accent-blue: #0284C7; /* Sky Blue */
-  --text: #1E293B; /* Dark Slate */
-  --muted: #64748B; /* Slate Gray */
-  --border: rgba(15, 23, 42, 0.1);
-  --glow: 0 8px 30px rgba(79, 70, 229, 0.15);
+  --text: #0F172A; /* Slate 900 for sharp text */
+  --muted: #475569; /* Slate 600 */
+  --border: rgba(15, 23, 42, 0.06);
+  --glow: 0 10px 40px rgba(79, 70, 229, 0.12);
 }
 
 * {
@@ -22,7 +22,13 @@ html {
 }
 
 body {
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: 
+    radial-gradient(circle at 0% 0%, rgba(79, 70, 229, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 100% 0%, rgba(2, 132, 199, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(79, 70, 229, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 0% 100%, rgba(2, 132, 199, 0.06) 0%, transparent 40%);
+  background-attachment: fixed;
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   overflow-x: hidden;
@@ -252,17 +258,20 @@ section { position: relative; z-index: 1; }
 h1.name {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
-  line-height: 1.1;
-  letter-spacing: -.03em;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.2;
+  letter-spacing: -.02em;
   color: var(--text);
   opacity: 0;
   animation: slideUp .9s .5s forwards;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 h1.name .outline {
-  color: var(--accent);
+  color: transparent;
+  background: linear-gradient(90deg, var(--accent), var(--accent-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .hero-sub {
