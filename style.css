@@ -208,6 +208,22 @@ section { position: relative; z-index: 1; }
   transform: translateY(-10px);
 }
 
+.hero-heading {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.name-profile-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 2px solid rgba(255,255,255,0.65);
+  box-shadow: var(--glow);
+}
+
 .blob {
   position: absolute;
   border-radius: 50%;
@@ -848,6 +864,8 @@ footer b { color: var(--accent); font-weight: 700; }
   .hero-eyebrow { justify-content: center; }
   .btns { justify-content: center; }
   .hero-links { justify-content: center; }
+  .hero-heading { justify-content: center; }
+  .name-profile-img { width: 96px; height: 96px; }
 }
 
 @media (max-width: 768px) {
