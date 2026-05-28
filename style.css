@@ -173,6 +173,7 @@ section { position: relative; z-index: 1; }
 
 /* hero */
 #hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -182,30 +183,40 @@ section { position: relative; z-index: 1; }
 }
 
 .hero-content {
-  flex: 1;
-  max-width: 650px;
+  flex: 0 0 48%;
+  max-width: 48%;
 }
 
 .hero-img-box {
-  flex: 1;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(520px, 44vw);
+  height: auto;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   opacity: 0;
   animation: fadeIn 1.2s .6s forwards;
+  z-index: 1;
+  pointer-events: auto;
 }
 
 .profile-img {
   width: 100%;
-  max-width: 450px;
-  border-radius: 20px;
-  box-shadow: var(--glow);
-  border: 2px solid rgba(255,255,255,0.5);
-  transition: transform 0.4s ease;
+  max-width: 560px;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 36px 90px rgba(15,23,42,0.14), 0 18px 60px rgba(79,70,229,0.08);
+  border: none;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  object-fit: cover;
 }
 
 .profile-img:hover {
-  transform: translateY(-10px);
+  transform: translateY(-12px) scale(1.01);
+  box-shadow: 0 40px 100px rgba(15,23,42,0.15), 0 18px 60px rgba(79,70,229,0.12);
 }
 
 .hero-heading {
@@ -858,13 +869,13 @@ footer b { color: var(--accent); font-weight: 700; }
 .cur { animation: blink 1s infinite; }
 
 @media (max-width: 992px) {
-  #hero { flex-direction: column-reverse; justify-content: center; text-align: center; padding-top: 6rem;}
-  .hero-img-box { margin-bottom: 2rem; }
-  .profile-img { max-width: 300px; }
-  .hero-eyebrow { justify-content: center; }
-  .btns { justify-content: center; }
-  .hero-links { justify-content: center; }
-  .hero-heading { justify-content: center; }
+  #hero { flex-direction: row; justify-content: flex-start; text-align: left; padding-top: 6rem; }
+  .hero-img-box { position: absolute; right: 2vw; top: 50%; transform: translateY(-50%); width: min(420px, 42vw); }
+  .profile-img { max-width: 420px; }
+  .hero-eyebrow { justify-content: flex-start; }
+  .btns { justify-content: flex-start; }
+  .hero-links { justify-content: flex-start; }
+  .hero-heading { justify-content: flex-start; }
   .name-profile-img { width: 96px; height: 96px; }
 }
 
@@ -875,4 +886,5 @@ footer b { color: var(--accent); font-weight: 700; }
   .about-wrap { grid-template-columns: 1fr; gap: 3rem; }
   .projects-wrap { grid-template-columns: 1fr; }
   h1.name { white-space: normal; font-size: clamp(2.8rem, 10vw, 4rem); }
+  .hero-img-box { display: none; }
 }
