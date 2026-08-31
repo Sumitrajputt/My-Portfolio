@@ -39,7 +39,7 @@ I'm **Sumit Kumar Singh**, a passionate Computer Science Engineering student at 
 
 ## 🎓 Education
 
-- **B.Tech — CSE**, Parul University, Vadodara (Expected 2023–27) - CGPA: 7.02
+- **B.Tech — CSE**, Parul University, Vadodara (Expected 2023–27) - CGPA: 7.12
 - **Intermediate Annual Examination**, Rajdeo Singh College, Siwan (2023) - BSEB Board
 - **Secondary School Examination**, NAV UTTKRAMIT MS SACHULEPUR HUSSAINGANJ, Siwan (2021) - BSEB Board
 
